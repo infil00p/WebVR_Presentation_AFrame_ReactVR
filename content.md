@@ -1,10 +1,10 @@
-<!-- .slide: data-background="media/img/aframe.jpg" -->
+<!-- .slide: data-background="images/AdobeStock_108132157.jpeg" -->
 
 <div class="talk-title">
-  <h1>A-Frame</h1>
-  <p>A web framework for building VR experiences</p>
+  <h1>WebVR and Cordova</h1>
+  <p>A survey of WebVR in 2017</p>
   <p class="talk-info">
-    @andgokevin | Mozilla VR | **aframe.io**
+    jbowser@adobe.com | Adobe | **phonegap.com**
   </p>
 </div>
 
@@ -342,277 +342,6 @@ A web framework for building virtual reality experiences
 - All tools were on top of the notion of HTML
 - Under the hood, A-Frame is an extensible, declarative framework for three.js...
 
-------
-
-# Entity-Component-System
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" -->
-
-<!-- NOTES -->
-- Is an entity-component framework
-- Popular in game development, used by Unity
-- All objects in scene are **entities** that inherently empty objects. Plug in
-  **components** to attach appearance / behavior / functionality
-- 2D web where every element was fixed
-- 3D/VR is different, objects of infinite types and complexities, need an easy way to build up different kinds of objects
-
----
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="slide-in none" -->
-
-## Composing an Entity
-
-```html
-<a-entity>
-```
-<!-- .element: class="stretch" -->
-
-<!-- NOTES -->
-- Start with an `<a-entity>`
-- By itself, has no appearance, behavior, functionality
-- Plug in components to add appearance, behavior, functionality
-
----
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  geometry="primitive: sphere; radius: 1.5"
-  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture">
-```
-<!-- .element: class="stretch" -->
-
-<!-- NOTES -->
-- Syntax similar to CSS styles
-- Component names as HTML attributes
-- Component properties and values as HTML attribute value
-
----
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  geometry="primitive: sphere; radius: 1.5"
-  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2">
-```
-<!-- .element: class="stretch" -->
-
----
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  geometry="primitive: sphere; radius: 1.5"
-  material="color: #343434; roughness: 0.4; sphericalEnvMap: #texture"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-  animation="property: rotation; loop: true; to: 0 360 0"
-  movement-pattern="type: spline; speed: 4">
-```
-<!-- .element: class="stretch" -->
-
----
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  json-model="src: #robot"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-  animation="property: rotation; loop: true; to: 0 360 0"
-  movement-pattern="type: spline; speed: 4">
-```
-<!-- .element: class="stretch" -->
-
----
-
-## Composing an Entity
-
-<!-- .slide: data-background="media/img/minecraft-blocks.png" data-transition="none" -->
-
-```html
-<a-entity
-  json-model="src: #robot"
-  position="-1 2 4" rotation="45 0 90" scale="2 2 2"
-  animation="property: rotation; loop: true; to: 0 360 0"
-  movement-pattern="type: attack; target: #player"
-  explode="on: hit">
-```
-<!-- .element: class="stretch" -->
-
----
-
-<!-- .slide: data-background="media/img/standard-components.png" data-background-size="contain" -->
-
-<!-- NOTES -->
-- These are some components that ship with A-Frame
-- A-Frame is fully extensible at its core so...
-
----
-
-<!-- .slide: data-background="media/img/community-components.png" data-background-size="contain" -->
-
-<!-- NOTES -->
-- Community has filled the ecosystem with tons of components
-- Components can do whatever they want, have full access to three.js and Web APIs
-- The component ecosystem the lifeblood of A-Frame
-- Physics, leap motion, particle systems, audio visualizations, oceans
-- Drop these components as script tags and use them straight from HTML
-- Advanced developers empowering other developers
-- Working on collecting these components...
-
----
-
-# Registry
-
-<!-- .slide: data-background-color="#333" -->
-
-Curated collection of A-Frame components.
-
-<a class="stretch" href="https://aframe.io/aframe-registry">
-  <video loop data-src="media/video/registrypreview.mp4" data-autoplay></video>
-</a>
-
-<!-- NOTES -->
-- Collecting them into the A-Frame registry
-- Like a store of components that we make sure work well
-- People can browse and search for components or install them....
-
----
-
-# Registry
-
-<!-- .slide: data-background-color="#333" -->
-
-Curated collection of A-Frame components.
-
-<video loop data-src="media/video/leaphands.mp4" data-autoplay></video>
-
----
-
-## Inspector
-
-<!-- .slide: data-background="media/img/inspector.png" data-state="state--bg-dark" -->
-
-Visual tool for A-Frame. Just `<ctrl>+<alt>+i`.
-
-<div class="stretch" data-aframe-scene="scenes/80s.html"></div>
-
-------
-
-<!-- .slide: data-background="media/img/header.png" -->
-
-# Community
-
-https://aframe.io/blog/
-
----
-
-<!-- .slide: data-background="media/img/apainter.gif" -->
-
-# Art - *A-Painter*
-
-@mozillavr
-
----
-
-<!-- .slide: data-background="media/img/syria.gif" -->
-
-# Journalism - *Fear of the Sky*
-
-Amnesty International UK
-
----
-
-<!-- .slide: data-background="media/img/mars.jpg" -->
-
-# Journalism - *Journey to Mars*
-
-The Washington Post
-
----
-
-<!-- .slide: data-background="media/img/citybuilder.gif" -->
-
-# Sandbox - *City Builder*
-
-@kfarr
-
----
-
-<!-- .slide: data-background="media/img/adit.gif" -->
-
-# Data Visualization - *Adit*
-
-@datatitian
-
----
-
-<!-- .slide: data-background="media/img/a-blast.gif" -->
-
-# Gaming - *A-Blast*
-
-@mozillavr
-
----
-
-<!-- .slide: data-background="media/img/ux.gif" -->
-
-# Prototyping - *UI Widgets*
-
-@whoyee
-
----
-
-<!-- .slide: data-background="media/img/math.gif" -->
-
-# Mathematics - *MathworldVR*
-
-@sleighdogs
-
----
-
-<!-- .slide: data-background="media/img/ar.gif" -->
-
-# AR - *AR.js + A-Frame*
-
-@jerome_etienne
-
----
-
-<!-- .slide: data-background="media/img/webvrstudio.png" -->
-
-# Tools - *WebVR Studio*
-
-@webvrstudio
-
----
-
-<!-- .slide: data-background-video="media/video/livetour.mp4" data-background-video-loop="true" -->
-
-# Real Estate - *Live Tour*
-
-iStaging
-
----
-
-<!-- .slide: data-background="media/img/cadavr.gif" -->
-
-# Education - *CadaVR*
-
-@drryanjames
-
 ---
 
 # aframe.io
@@ -637,3 +366,132 @@ iStaging
 - Most work done on GitHub
 - Active community on Slack to share projects, interact, hang out, seek help
 - Featured projects on the `awesome-aframe` repository and *A Week of A-Frame* blog
+------
+# React VR
+
+<!-- .slide: data-background="images/opengraph.png" -->
+
+<!-- NOTES -->
+
+- Familiar with React users
+- Used by the Facebook Oculus Team (Oculus Home)
+- Works with the WebVR standards
+- Does not work with non-WebVR browsers (does not come with a poly-fill)
+- Less widely adopted by third-party developers
+
+---
+
+## Hello World
+
+<!-- .slide: data-background="images/opengraph.png" -->
+
+```javascript
+'use strict';
+import React from 'react';
+import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
+
+class WelcomeToVR extends React.Component {
+  render() {
+    // Displays "hello" text on top of a loaded 360 panorama image.
+    // Text is 0.8 meters in size and is centered three meters in front of you.
+    return (
+      <View>
+        <Pano source={asset('chess-world.jpg')}/>
+        <Text
+          style={{
+            backgroundColor: '#777879',
+            fontSize: 0.8,
+            layoutOrigin: [0.5, 0.5],
+            paddingLeft: 0.2,
+            paddingRight: 0.2,
+            textAlign: 'center',
+            textAlignVertical: 'center',
+            transform: [{translate: [0, 0, -3]}],
+          }}>
+          hello
+        </Text>
+      </View>
+    );
+  }
+};
+
+AppRegistry.registerComponent('WelcomeToVR', () => WelcomeToVR);
+```
+<!-- .element: class="stretch" -->
+
+---
+
+## React VR vs A-Frame
+
+<!-- .slide: data-background="images/versus.png" -->
+
+
+<!-- Notes -->
+ - A-Frame uses an Entity-Component model
+ - React VR uses whatever React uses
+ - A-Frame is more widely adopted and used than ReactVR
+ - React VR is written for for Carmel/Oculus Browser
+
+------
+# Real Talk
+
+<!-- .slide: data-background="images/AdobeStock_79398923.jpeg" -->
+
+
+<!-- Notes -->
+
+- WebVR is very cutting edge
+- The future is here, just not on mobile yet
+- Lessons learned from the Mobile wars replaying themselves
+
+---
+
+## Cordova and WebVR
+
+<!-- Notes -->
+- Cordova currently does NOT support WebVR
+- Relies on the webvr-boilerplate
+- Support for WebVR will become more available once a path is clear
+- It's unclear whether WebVR experiences will be first-class citizens on Play or Oculus
+- Challenges similar to PhoneGap 1.0 except this time for VR
+
+---
+## App Stores
+
+<!-- .slide: data-background="images/AdobeStock_10690122.jpeg" -->
+
+---
+
+## Android WebView vs Chromium
+
+<!-- Notes -->
+- Blink and Chrome are different things
+- Android embeds Blink, not Chrome
+- Cordova extends Blink and the Android SDK's WebView
+- Third Party Webviews could emerge again in the future
+- WebVR support may come to embedded browsers
+
+---
+
+## iOS support
+
+<!-- .slide: data-background="images/AdobeStock_74525852.jpeg" -->
+
+
+<!-- Notes -->
+- Mobile Safari does not support WebVR at all
+- Apple is working on something in VR, but nobody knows
+- Tons of speculation, no actual info
+
+---
+
+### All is not lost
+
+------
+
+## Acknowledgement
+
+<ul>
+  <li><a href="https://aframe.io">A-Frame</a></li>
+  <li><a href="https://github.com/ngokevin">Kevin Ngo</a> - created the aframe slide template</li>
+</ul>
