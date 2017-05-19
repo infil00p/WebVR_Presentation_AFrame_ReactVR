@@ -503,10 +503,15 @@ AppRegistry.registerComponent('WelcomeToVR', () => WelcomeToVR);
 ### DEMO TIME
 
 <ul>
-  <li><a href="https://infil00p.org/webvr/PhoneGapBot_Floating/">Floating PhoneGapBot</a></li>
-  <li><a href="https://infil00p.org/webvr/gallery">Gallery</a></li>
+  <li><a href="https://infil00p.org/webvr/PhoneGapBot_Floating/">Floating PhoneGapBot - http://bit.ly/2qEzdMB</a></li>
+  <li><a href="https://infil00p.org/webvr/gallery">Gallery - http://bit.ly/2q3xq1z</a></li>
 </ul>
 
+---
+
+### QR Code
+
+<img src="images/static_qr_code_without_logo.jpg">
 ------
 
 ## Acknowledgement
