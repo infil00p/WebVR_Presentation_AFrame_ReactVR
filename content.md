@@ -421,6 +421,12 @@ AppRegistry.registerComponent('WelcomeToVR', () => WelcomeToVR);
 
 ---
 
+### HELLO
+<!-- .slide: data-background="images/opengraph.png" -->
+
+<img src="images/image_1.jpg"> 
+---
+
 ## React VR vs A-Frame
 
 <!-- .slide: data-background="images/versus.png" -->
@@ -447,6 +453,7 @@ AppRegistry.registerComponent('WelcomeToVR', () => WelcomeToVR);
 ---
 
 ## Cordova and WebVR
+<!-- .slide: data-background="images/cordova_vr.jpg" -->
 
 <!-- Notes -->
 - Cordova currently does NOT support WebVR
@@ -486,6 +493,19 @@ AppRegistry.registerComponent('WelcomeToVR', () => WelcomeToVR);
 ---
 
 ### All is not lost
+<ul>
+  <li><a href="https://github.com/googlevr/webvr-polyfill">webvr-polyfill</a></li>
+  <li>WebVR is still experimental</li>
+</ul>
+
+---
+
+### DEMO TIME
+
+<ul>
+  <li><a href="https://infil00p.org/webvr/PhoneGapBot_Floating/">Floating PhoneGapBot</a></li>
+  <li><a href="https://infil00p.org/webvr/gallery">Gallery</a></li>
+</ul>
 
 ------
 
@@ -494,4 +514,13 @@ AppRegistry.registerComponent('WelcomeToVR', () => WelcomeToVR);
 <ul>
   <li><a href="https://aframe.io">A-Frame</a></li>
   <li><a href="https://github.com/ngokevin">Kevin Ngo</a> - created the aframe slide template</li>
+</ul>
+
+---
+
+## Thanks
+
+<ul>
+  <li><a href="https://github.com/infil00p">github.com/infil00p</a></li>
+  <li><a href="https://phonegap.com">phonegap.com</a></li>
 </ul>
